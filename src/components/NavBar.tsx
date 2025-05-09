@@ -8,6 +8,8 @@ interface NavLink {
   url: string;
 }
 
+const resumeUrl = "https://drive.google.com/file/d/1VZ9lzP45iUEr-V_7LvNoa-b87DUvvL84/view?usp=sharing";
+
 const navLinks: NavLink[] = [
   { name: "About", url: "#about" },
   { name: "Experience", url: "#experience" },
@@ -87,7 +89,7 @@ const NavBar = () => {
                   asChild
                   className="mt-4 border border-highlight text-highlight hover:bg-highlight/10 bg-transparent"
                 >
-                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                     Resume
                   </a>
                 </Button>
@@ -112,7 +114,7 @@ const NavBar = () => {
               asChild
               className="border border-highlight text-highlight hover:bg-highlight/10 bg-transparent"
             >
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>
