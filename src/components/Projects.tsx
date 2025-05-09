@@ -15,39 +15,48 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "Biasket Clone",
     description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment processing using Stripe.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "/public/bb_clone.png",
     tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/namadhre/Big_Basket_Clone",
+    demo: "https://namadhre-big-basket-clone.vercel.app/",
     featured: true
   },
   {
-    title: "Task Management System",
-    description: "A collaborative task management application featuring real-time updates, task assignments, priority levels, and progress tracking.",
+    title: "Image Processing",
+    description: "Developed an asynchronous image processing system (Complete Backend project) that takes a CSV file containing image URLs, compresses the images, stores them, and returns a processed CSV file.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tags: ["TypeScript", "React", "Firebase", "Redux", "Material UI"],
-    github: "#",
-    demo: "#",
+    tags: ["Node.js", "Express.js", "BullMQ (Redis)", "PostgreSQL", "Sharp"],
+    github: "https://github.com/namadhre/image-compressor",
+    demo: "https://image-compressor-app.up.railway.app/",
     featured: true
   },
   {
-    title: "Weather Dashboard",
-    description: "A responsive weather application that displays current conditions and 5-day forecasts for multiple locations with interactive maps.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    tags: ["JavaScript", "React", "OpenWeather API", "Chart.js", "Leaflet"],
-    github: "#",
-    demo: "#",
+    title: "Memory Game",
+    description: "Created a dynamic, interactive memory game with multiple difficulty levels. Implemented game logic using JavaScript and DOM manipulations..",
+    image: "/public/Memorygame.png",
+    tags: ["JavaScript", "CSS", "HTML", "DOM", "Local Storage"],
+    github: "https://github.com/namadhre/Memory-Game",
+    demo: "https://namadhre-memory-game.vercel.app/",
+    featured: false
+  },
+  {
+    title: "Fake Store",
+    description: "Created a dynamic, interactive memory game with multiple difficulty levels. Implemented game logic using JavaScript and DOM manipulations.",
+    image: "/public/fake_store.png",
+    tags: ["React", "Node.js", "CSS", "CRUD Operations"],
+    github: "https://github.com/namadhre/CRUD_APP",
+    demo: "https://namadhre-crud-appe.vercel.app/",
     featured: true
   },
   {
-    title: "Social Media Analytics Tool",
-    description: "Analytics dashboard for social media managers to track engagement, audience demographics, and content performance.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tags: ["Python", "Django", "React", "PostgreSQL", "Data Visualization"],
-    github: "#",
-    demo: "#",
+    title: "Calculator App",
+    description: "Developed a weather dashboard that displays current weather conditions and forecasts for multiple locations using OpenWeather API.",
+    image: "/public/calculator.png",
+    tags: ["JavaScript", "CSS", "React", "Redux"],
+    github: "https://github.com/namadhre/Calculator_App",
+    demo: "https://namadhre-calculator.vercel.app/",
     featured: false
   }
 ];
