@@ -1,7 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Link } from "react-router-dom";
 
 interface NavLink {
   name: string;
@@ -11,10 +11,10 @@ interface NavLink {
 const resumeUrl = "https://drive.google.com/file/d/1VZ9lzP45iUEr-V_7LvNoa-b87DUvvL84/view?usp=sharing";
 
 const navLinks: NavLink[] = [
-  { name: "About", url: "#about" },
-  { name: "Experience", url: "#experience" },
-  { name: "Projects", url: "#projects" },
-  { name: "Contact", url: "#contact" },
+  { name: "About", url: "/#about" },
+  { name: "Experience", url: "/#experience" },
+  { name: "Projects", url: "/#projects" },
+  { name: "Contact", url: "/#contact" },
 ];
 
 const NavBar = () => {
