@@ -58,6 +58,15 @@ const projects: Project[] = [
     github: "https://github.com/namadhre/Calculator_App",
     demo: "https://namadhre-calculator.vercel.app/",
     featured: false
+  },
+  {
+    title: "Payment Gateway Integration",
+    description: "Under development, currently working on it.",
+    image: "/public/payment_gateway.png",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
+    github: "#",
+    demo: "#",
+    featured: false
   }
 ];
 
