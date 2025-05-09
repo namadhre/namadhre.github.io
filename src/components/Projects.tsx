@@ -67,12 +67,12 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section-padding">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h2 className="section-heading mb-12">
           <span className="font-mono text-highlight mr-2">03.</span> Some Things I've Built
         </h2>
 
-        <div className="space-y-32 mb-24">
+        <div className="space-y-20 mb-20">
           {featuredProjects.map((project, i) => (
             <div 
               key={i}
