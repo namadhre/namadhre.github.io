@@ -4,14 +4,16 @@ import { Code, Database, Layout } from "lucide-react";
 const skills = [
   "JavaScript (ES6+)",
   "TypeScript",
+  "MongoDB",
+  "ExpressJs",
   "React",
   "Node.js",
-  "AWS",
   "Python",
-  "Java",
+  "ReduxJs",
+  "PostgreSQL",
+  "MySQL",
   "Docker",
-  "GraphQL",
-  "MongoDB",
+  "Redis",
 ];
 
 const About = () => {
@@ -26,9 +28,10 @@ const About = () => {
           <div className="md:col-span-2">
             <div className="space-y-4 text-base">
               <p>
-                Hello! I'm a passionate Software Development Engineer with a strong focus on creating efficient, 
-                scalable, and user-friendly applications. My journey in software engineering started over two years ago, 
-                and I've had the privilege to work with diverse technologies and teams since then.
+              I'm a passionate software development engineer with over 2 years of experience in Full Stack Development (Back-End heavy)
+              in a SaaS product-based company. I specialize in building scalable web applications using JavaScript, Python, Node.js, and React.js.
+              I enjoy problem-solving, working under pressure, and constantly learning new technologies to improve both my personal
+               and professional skillset.
               </p>
               <p>
                 My approach to development is guided by curiosity, attention to detail, and a commitment to writing

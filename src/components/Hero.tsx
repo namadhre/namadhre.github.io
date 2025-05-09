@@ -9,7 +9,7 @@ const Hero = () => {
           Hi, my name is
         </p>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-light mb-4 opacity-0 animate-fade-in animated-delay-2">
-          Your Name.
+          Mahendra Chinthamgari.
         </h1>
         <h2 className="text-4xl md:text-6xl font-bold text-slate mb-6 opacity-0 animate-fade-in animated-delay-3">
           I build things for the web.

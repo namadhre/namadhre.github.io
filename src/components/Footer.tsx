@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex space-x-6 mb-6">
             <a 
-              href="https://github.com/" 
+              href="https://github.com/namadhre" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate hover:text-highlight transition-colors"
@@ -17,7 +17,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/" 
+              href="https://linkedin.com/in/namadhre" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate hover:text-highlight transition-colors"
@@ -26,7 +26,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://twitter.com/" 
+              href="https://twitter.com/namadhre" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate hover:text-highlight transition-colors"
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           <div className="font-mono text-xs text-slate">
             <p>Designed & Built with ❤️</p>
-            <p className="mt-2">&copy; {new Date().getFullYear()} Your Name</p>
+            <p className="mt-2">&copy; {new Date().getFullYear()} Namadhre</p>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const SocialSidebar = () => {
       <ul className="flex flex-col items-center space-y-6 after:content-[''] after:block after:w-px after:h-24 after:bg-slate">
         <li>
           <a 
-            href="https://github.com/" 
+            href="https://github.com/namadhre" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-slate hover:text-highlight transition-colors transform hover:-translate-y-1"
@@ -18,7 +18,7 @@ const SocialSidebar = () => {
         </li>
         <li>
           <a 
-            href="https://linkedin.com/" 
+            href="https://linkedin.com/in/namadhre" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-slate hover:text-highlight transition-colors transform hover:-translate-y-1"
@@ -29,7 +29,7 @@ const SocialSidebar = () => {
         </li>
         <li>
           <a 
-            href="https://twitter.com/" 
+            href="https://twitter.com/namadhre" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-slate hover:text-highlight transition-colors transform hover:-translate-y-1"
@@ -40,7 +40,7 @@ const SocialSidebar = () => {
         </li>
         <li>
           <a 
-            href="mailto:your.email@example.com" 
+            href="mailto:mahendrachinthamgar@gmail.com" 
             className="text-slate hover:text-highlight transition-colors transform hover:-translate-y-1"
             aria-label="Email"
           >

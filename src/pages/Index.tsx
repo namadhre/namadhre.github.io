@@ -12,7 +12,7 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Your Name | Software Development Engineer";
+    document.title = "Namadhre | Software Development Engineer";
     
     // Scroll restoration on page load
     window.history.scrollRestoration = "manual";
