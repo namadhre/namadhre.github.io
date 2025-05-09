@@ -1,0 +1,36 @@
+
+import { Button } from "@/components/ui/button";
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center section-padding pt-32">
+      <div className="max-w-4xl w-full">
+        <p className="font-mono text-highlight mb-4 opacity-0 animate-fade-in animated-delay-1">
+          Hi, my name is
+        </p>
+        <h1 className="text-5xl md:text-7xl font-bold text-slate-light mb-4 opacity-0 animate-fade-in animated-delay-2">
+          Your Name.
+        </h1>
+        <h2 className="text-4xl md:text-6xl font-bold text-slate mb-6 opacity-0 animate-fade-in animated-delay-3">
+          I build things for the web.
+        </h2>
+        <p className="text-lg text-slate max-w-xl mb-8 opacity-0 animate-fade-in animated-delay-4">
+          I'm a software development engineer with over 2 years of experience specializing in building 
+          exceptional digital experiences. Currently, I'm focused on building accessible, human-centered 
+          products.
+        </p>
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '500ms' }}>
+          <Button 
+            asChild
+            className="text-highlight border border-highlight hover:bg-highlight/10 bg-transparent"
+            size="lg"
+          >
+            <a href="#projects">Check out my work</a>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
