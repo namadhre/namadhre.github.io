@@ -5,42 +5,35 @@ import { Button } from "@/components/ui/button";
 interface ExperienceItem {
   title: string;
   company: string;
+  companyLink: string;
   date: string;
   points: string[];
 }
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Software Development Engineer",
-    company: "Tech Company Inc.",
-    date: "January 2023 - Present",
+    title: "SDE - 1",
+    company: "Aerchain",
+    companyLink: "https://www.aerchain.io/",
+    date: "March 2023 - Present",
     points: [
-      "Led the development of a microservices architecture, resulting in a 40% improvement in system scalability.",
-      "Collaborated with UX designers to implement responsive frontend components using React and TypeScript.",
-      "Implemented automated testing workflows that reduced bug report rates by 25%.",
-      "Mentored junior developers and conducted code reviews to ensure code quality and standards."
+      "Optimized backend performance by reducing API call times from over 2 minutes to 3 milliseconds through query indexing and failure elimination.",
+      "Improved system reliability, resolving high-priority production and UAT issues, increasing uptime by 10% and reducing recurring failures by 30%.",
+      "Led sprint issue resolution as Single Point of Contact (SPOC), ensuring critical issues were resolved within 2 hours to minimize downtime.",
+      "Built and deployed scalable APIs integrated with Syspro and SAP, fully automating data sync and eliminating manual data entry.",
+      "Enhanced code quality and team efficiency through peer code reviews, clean code practices."
     ]
   },
   {
-    title: "Associate Software Engineer",
-    company: "Digital Solutions Ltd.",
-    date: "June 2021 - December 2022",
+    title: "SDE - Intern",
+    company: "MountBlue Technologies",
+    companyLink: "https://www.mountblue.io/",
+    date: "November 2022 - March 2023",
     points: [
-      "Developed and maintained RESTful APIs using Node.js and Express, servicing over 10,000 daily users.",
-      "Optimized database queries that reduced page load times by 30%.",
-      "Implemented authentication and authorization systems using JWT and OAuth2.0.",
-      "Participated in agile development processes, including daily standups and sprint planning."
-    ]
-  },
-  {
-    title: "Software Engineering Intern",
-    company: "Future Tech Corp",
-    date: "January 2021 - May 2021",
-    points: [
-      "Assisted in developing features for the company's main web application using React and Redux.",
-      "Created automated scripts that improved deployment efficiency by 15%.",
-      "Participated in UI/UX improvements that positively impacted user engagement metrics.",
-      "Collaborated with senior engineers to debug and resolve critical production issues."
+      "Completed intensive Full-Stack Developer training, gaining expertise in React, Node.js, and RESTful APIs under industry professionals.",
+      "Designed and built multiple web applications, including an e-commerce platform and CRUD application, improving problem-solving skills.",
+      "Applied clean coding principles and optimized code efficiency, reducing execution time and improving maintainability.",
+      "Participated in weekly coding challenges and group discussions to enhance coding skills and collaboration."
     ]
   }
 ];
@@ -79,7 +72,7 @@ const Experience = () => {
             <div className="animate-fade-in" key={activeTab}>
               <h3 className="text-xl text-slate-light font-semibold mb-1">
                 {experiences[activeTab].title}{" "}
-                <span className="text-highlight">@ {experiences[activeTab].company}</span>
+                <span className="text-highlight">@ <a href={experiences[activeTab].companyLink} target="_blank" rel="noopener noreferrer" style={{cursor: 'pointer'}}>{experiences[activeTab].company}</a></span>
               </h3>
               <p className="font-mono text-sm text-slate mb-4">
                 {experiences[activeTab].date}

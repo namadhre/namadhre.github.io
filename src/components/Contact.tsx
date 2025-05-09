@@ -16,7 +16,7 @@ const Contact = () => {
           className="border border-highlight text-highlight hover:bg-highlight/10 bg-transparent"
           size="lg"
         >
-          <a href="mailto:your.email@example.com">Say Hello</a>
+          <a href="mailto:mahendrachinthamgar@gmail.com">Say Hello</a>
         </Button>
       </div>
     </section>
