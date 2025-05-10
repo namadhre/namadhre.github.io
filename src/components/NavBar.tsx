@@ -11,10 +11,10 @@ interface NavLink {
 const resumeUrl = "https://drive.google.com/file/d/1VZ9lzP45iUEr-V_7LvNoa-b87DUvvL84/view?usp=sharing";
 
 const navLinks: NavLink[] = [
-  { name: "About", url: "/#about" },
-  { name: "Experience", url: "/#experience" },
-  { name: "Projects", url: "/#projects" },
-  { name: "Contact", url: "/#contact" },
+  { name: "About", url: "#about" },
+  { name: "Experience", url: "#experience" },
+  { name: "Projects", url: "#projects" },
+  { name: "Contact", url: "#contact" },
 ];
 
 const NavBar = () => {
@@ -34,6 +34,15 @@ const NavBar = () => {
     };
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 z-50 w-full px-4 md:px-12 py-4 transition-all duration-300 ${
@@ -41,7 +50,7 @@ const NavBar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="text-2xl font-bold text-highlight">SDE</div>
+        <Link to="/" className="text-2xl font-bold text-highlight">SDE</Link>
 
         {isMobile ? (
           <>
@@ -68,26 +77,26 @@ const NavBar = () => {
                 />
               </div>
             </button>
-            
-            <div
-              className={`fixed inset-0 bg-navy-dark/90 backdrop-blur-lg flex flex-col items-center justify-center transition-all duration-300 ${
-                menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            <div 
+              className={`fixed inset-0 bg-navy-dark/95 backdrop-blur-sm z-40 transition-transform duration-300 ${
+                menuOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
-              <nav className="flex flex-col items-center gap-8">
+              <nav className="h-full flex flex-col items-center justify-center gap-8">
                 {navLinks.map((link, i) => (
                   <a
                     key={i}
                     href={link.url}
-                    onClick={() => setMenuOpen(false)}
-                    className="text-xl font-mono text-slate-light hover:text-highlight"
+                    onClick={(e) => scrollToSection(e, link.url.substring(1))}
+                    className="text-2xl text-slate-light hover:text-highlight transition-colors"
                   >
-                    <span className="text-highlight">0{i + 1}.</span> {link.name}
+                    {link.name}
                   </a>
                 ))}
                 <Button
+                  variant="outline"
+                  className="text-highlight border-highlight hover:bg-highlight/10"
                   asChild
-                  className="mt-4 border border-highlight text-highlight hover:bg-highlight/10 bg-transparent"
                 >
                   <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                     Resume
@@ -98,21 +107,20 @@ const NavBar = () => {
           </>
         ) : (
           <nav className="flex items-center gap-8">
-            <ol className="flex gap-8">
-              {navLinks.map((link, i) => (
-                <li key={i} className="font-mono text-sm">
-                  <a
-                    href={link.url}
-                    className="text-slate hover:text-highlight link-underline"
-                  >
-                    <span className="text-highlight">0{i + 1}.</span> {link.name}
-                  </a>
-                </li>
-              ))}
-            </ol>
+            {navLinks.map((link, i) => (
+              <a
+                key={i}
+                href={link.url}
+                onClick={(e) => scrollToSection(e, link.url.substring(1))}
+                className="text-slate-light hover:text-highlight transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
             <Button
+              variant="outline"
+              className="text-highlight border-highlight hover:bg-highlight/10"
               asChild
-              className="border border-highlight text-highlight hover:bg-highlight/10 bg-transparent"
             >
               <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 Resume
