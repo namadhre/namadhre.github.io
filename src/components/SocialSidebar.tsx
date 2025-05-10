@@ -40,7 +40,7 @@ const SocialSidebar = () => {
         </li>
         <li>
           <a 
-            href="mailto:mahendrachinthamgar@gmail.com" 
+            href="mailto:mahendrachinthamgari@gmail.com"
             className="text-slate hover:text-highlight transition-colors transform hover:-translate-y-1"
             aria-label="Email"
           >
