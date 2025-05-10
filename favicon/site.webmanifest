@@ -3,12 +3,12 @@
   "short_name": "Namadhre",
   "icons": [
     {
-      "src": "/portfolio/favicon/favicon.svg",
+      "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     },
     {
-      "src": "/portfolio/favicon/favicon.ico",
+      "src": "favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
     }
@@ -16,5 +16,5 @@
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone",
-  "start_url": "/portfolio/"
+  "start_url": "."
 } 
