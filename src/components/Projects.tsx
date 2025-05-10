@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink } from "lucide-react";
@@ -17,7 +16,7 @@ const projects: Project[] = [
   {
     title: "Biasket Clone",
     description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment processing using Stripe.",
-    image: "/public/bb_clone.png",
+    image: "/portfolio/images/bb_clone.png",
     tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
     github: "https://github.com/namadhre/Big_Basket_Clone",
     demo: "https://namadhre-big-basket-clone.vercel.app/",
@@ -35,7 +34,7 @@ const projects: Project[] = [
   {
     title: "Memory Game",
     description: "Created a dynamic, interactive memory game with multiple difficulty levels. Implemented game logic using JavaScript and DOM manipulations..",
-    image: "/public/Memorygame.png",
+    image: "/portfolio/images/Memorygame.png",
     tags: ["JavaScript", "CSS", "HTML", "DOM", "Local Storage"],
     github: "https://github.com/namadhre/Memory-Game",
     demo: "https://namadhre-memory-game.vercel.app/",
@@ -44,7 +43,7 @@ const projects: Project[] = [
   {
     title: "Fake Store",
     description: "Created a dynamic, interactive memory game with multiple difficulty levels. Implemented game logic using JavaScript and DOM manipulations.",
-    image: "/public/fake_store.png",
+    image: "/portfolio/images/fake_store.png",
     tags: ["React", "Node.js", "CSS", "CRUD Operations"],
     github: "https://github.com/namadhre/CRUD_APP",
     demo: "https://namadhre-crud-appe.vercel.app/",
@@ -53,7 +52,7 @@ const projects: Project[] = [
   {
     title: "Calculator App",
     description: "Developed a weather dashboard that displays current weather conditions and forecasts for multiple locations using OpenWeather API.",
-    image: "/public/calculator.png",
+    image: "/portfolio/images/calculator.png",
     tags: ["JavaScript", "CSS", "React", "Redux"],
     github: "https://github.com/namadhre/Calculator_App",
     demo: "https://namadhre-calculator.vercel.app/",
@@ -62,7 +61,7 @@ const projects: Project[] = [
   {
     title: "Payment Gateway Integration",
     description: "Under development, currently working on it.",
-    image: "/public/payment_gateway.png",
+    image: "/portfolio/images/payment_gateway.png",
     tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
     github: "#",
     demo: "#",

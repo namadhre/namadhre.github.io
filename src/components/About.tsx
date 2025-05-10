@@ -1,4 +1,3 @@
-
 import { Code, Database, Layout } from "lucide-react";
 
 const skills = [
@@ -44,7 +43,7 @@ const About = () => {
           <div className="relative group">
             <div className="absolute inset-0 bg-highlight rounded opacity-20 group-hover:opacity-30 transition-opacity"></div>
             <img 
-              src="/public/profile.jpg" 
+              src="/portfolio/images/profile.jpg" 
               alt="Developer" 
               className="relative z-10 rounded grayscale hover:grayscale-0 transition-all duration-300 w-full"
             />
