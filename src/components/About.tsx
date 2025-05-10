@@ -8,10 +8,10 @@ const skills = [
   "React",
   "Node.js",
   "Python",
+  "Data Structures and Algorithms",
   "ReduxJs",
   "PostgreSQL",
   "MySQL",
-  "Docker",
   "Redis",
 ];
 

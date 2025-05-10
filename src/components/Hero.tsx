@@ -11,13 +11,17 @@ const Hero = () => {
           Mahendra Chinthamgari.
         </h1>
         <h2 className="text-4xl md:text-6xl font-bold text-slate mb-6 opacity-0 animate-fade-in animated-delay-3">
-          I build things for the web.
+          I build purposeful software.
         </h2>
         <p className="text-lg text-slate max-w-xl mb-8 opacity-0 animate-fade-in animated-delay-4">
-          I'm a software development engineer with over 2 years of experience specializing in building 
-          exceptional digital experiences. Currently, I'm focused on building accessible, human-centered 
-          products.
+          With over two years of hands-on experience as a Software Development Engineer, I bring ideas to
+          life through clean code, intuitive interfaces, and scalable architecture. My work blends engineering
+          precision with a user-first mindset — crafting fast, accessible, and meaningful digital experiences that make
+          a difference.
         </p>
+        <h3 className="text-2xl md:text-4xl font-bold text-slate mb-6 opacity-0 animate-fade-in animated-delay-5">
+          Let's build something impactful together.
+        </h3>
         <div className="opacity-0 animate-fade-in" style={{ animationDelay: '500ms' }}>
           <Button 
             asChild
