@@ -3,17 +3,18 @@
   "short_name": "Portfolio",
   "icons": [
     {
-      "src": "/portfolio/favicon/favicon.svg",
+      "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     },
     {
-      "src": "/portfolio/favicon/favicon.ico",
+      "src": "favicon.ico",
       "sizes": "64x64",
       "type": "image/x-icon"
     }
   ],
   "theme_color": "#64ffda",
   "background_color": "#0a192f",
-  "display": "standalone"
+  "display": "standalone",
+  "start_url": "/"
 } 
