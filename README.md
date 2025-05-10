@@ -1,13 +1,20 @@
-# Welcome to My Portfolio
+# Portfolio Website
 
-## Project info
+My personal portfolio website built with React, TypeScript, and Tailwind CSS.
 
-## What technologies are used for this project?
+## Features
 
-This project is built with:
+- Responsive design
+- Modern UI with Tailwind CSS
+- TypeScript for type safety
+- React Router for navigation
+- GitHub Pages deployment
 
-- Vite
-- TypeScript
+## Tech Stack
+
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- Vite
+- React Router
+- Shadcn UI Components
