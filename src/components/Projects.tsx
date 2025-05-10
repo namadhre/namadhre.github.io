@@ -1,202 +1,131 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink } from "lucide-react";
+
+import { ExternalLink } from "lucide-react";
+import { Badge } from "./ui/badge";
 
 interface Project {
   title: string;
   description: string;
-  image: string;
-  tags: string[];
-  github: string;
-  demo: string;
-  featured: boolean;
+  technologies: string[];
+  imageUrl: string;
+  liveUrl: string;
+  githubUrl: string;
 }
 
-const projects: Project[] = [
-  {
-    title: "Biasket Clone",
-    description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment processing using Stripe.",
-    image: "/portfolio/images/bb_clone.png",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-    github: "https://github.com/namadhre/Big_Basket_Clone",
-    demo: "https://namadhre-big-basket-clone.vercel.app/",
-    featured: true
-  },
-  {
-    title: "Image Processing",
-    description: "Developed an asynchronous image processing system (Complete Backend project) that takes a CSV file containing image URLs, compresses the images, stores them, and returns a processed CSV file.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tags: ["Node.js", "Express.js", "BullMQ (Redis)", "PostgreSQL", "Sharp"],
-    github: "https://github.com/namadhre/image-compressor",
-    demo: "https://image-compressor-app.up.railway.app/",
-    featured: true
-  },
+const projectsData: Project[] = [
   {
     title: "Memory Game",
-    description: "Created a dynamic, interactive memory game with multiple difficulty levels. Implemented game logic using JavaScript and DOM manipulations..",
-    image: "/portfolio/images/Memorygame.png",
-    tags: ["JavaScript", "CSS", "HTML", "DOM", "Local Storage"],
-    github: "https://github.com/namadhre/Memory-Game",
-    demo: "https://namadhre-memory-game.vercel.app/",
-    featured: false
+    description:
+      "A fun memory card matching game built with React. Test your memory by finding matching pairs of cards.",
+    technologies: ["React", "JavaScript", "CSS"],
+    imageUrl: "/portfolio/images/Memorygame.png",
+    liveUrl: "https://memory-game-react-smoky.vercel.app/",
+    githubUrl: "https://github.com/Namadhre/Memory-game-React",
   },
   {
-    title: "Fake Store",
-    description: "Created a dynamic, interactive memory game with multiple difficulty levels. Implemented game logic using JavaScript and DOM manipulations.",
-    image: "/portfolio/images/fake_store.png",
-    tags: ["React", "Node.js", "CSS", "CRUD Operations"],
-    github: "https://github.com/namadhre/CRUD_APP",
-    demo: "https://namadhre-crud-appe.vercel.app/",
-    featured: true
+    title: "E-commerce Store",
+    description:
+      "A fully responsive e-commerce store with product filtering, cart functionality, and checkout process.",
+    technologies: ["React", "Redux", "Tailwind CSS"],
+    imageUrl: "/portfolio/images/fake_store.png",
+    liveUrl: "https://fakestorenamad.netlify.app/",
+    githubUrl: "https://github.com/Namadhre/fakeStore",
   },
   {
-    title: "Calculator App",
-    description: "Developed a weather dashboard that displays current weather conditions and forecasts for multiple locations using OpenWeather API.",
-    image: "/portfolio/images/calculator.png",
-    tags: ["JavaScript", "CSS", "React", "Redux"],
-    github: "https://github.com/namadhre/Calculator_App",
-    demo: "https://namadhre-calculator.vercel.app/",
-    featured: false
+    title: "Breaking Bad Clone",
+    description:
+      "A Breaking Bad themed website that displays character information using the Breaking Bad API.",
+    technologies: ["React", "API", "Styled Components"],
+    imageUrl: "/portfolio/images/bb_clone.png",
+    liveUrl: "https://breaking-bad-clone-ts.netlify.app/",
+    githubUrl: "https://github.com/Namadhre/Breaking-Bad-Clone-TS",
   },
   {
-    title: "Payment Gateway Integration",
-    description: "Under development, currently working on it.",
-    image: "/portfolio/images/payment_gateway.png",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-    github: "#",
-    demo: "#",
-    featured: false
-  }
+    title: "React Calculator",
+    description:
+      "A fully functional calculator application built with React featuring basic and advanced operations.",
+    technologies: ["React", "JavaScript", "CSS"],
+    imageUrl: "/portfolio/images/calculator.png",
+    liveUrl: "https://namads-calculator.netlify.app/",
+    githubUrl: "https://github.com/Namadhre/Calculator-React-App",
+  },
 ];
 
 const Projects = () => {
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
-
   return (
-    <section id="projects" className="section-padding">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="section-heading mb-12">
-          <span className="font-mono text-highlight mr-2">03.</span> Some Things I've Built
+    <section id="projects" className="py-24">
+      <div className="container mx-auto px-4 md:px-6 lg:max-w-4xl xl:max-w-5xl">
+        <h2 className="text-2xl md:text-3xl font-bold text-green mb-2 numbered-heading before:content-['03.'] before:mr-2 before:text-green before:font-mono">
+          Some Things I've Built
         </h2>
-
-        <div className="space-y-20 mb-20">
-          {featuredProjects.map((project, i) => (
-            <div 
-              key={i}
-              className={`relative md:grid md:grid-cols-12 gap-4 items-center ${
-                i % 2 === 0 ? "" : "md:text-right"
-              }`}
+        <div className="mt-10 grid gap-10">
+          {projectsData.map((project, index) => (
+            <div
+              key={index}
+              className="bg-navy p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-800"
             >
-              <div 
-                className={`md:col-span-7 relative group ${
-                  i % 2 === 0 ? "md:col-start-6" : "md:col-start-1"
-                }`}
-              >
-                <div className="absolute inset-0 bg-highlight/20 rounded opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover rounded shadow-lg"
-                />
-              </div>
-              <div 
-                className={`md:col-span-6 ${
-                  i % 2 === 0 
-                    ? "md:col-start-1 md:text-left" 
-                    : "md:col-start-7 md:text-right"
-                } md:z-10`}
-              >
-                <p className="font-mono text-highlight text-sm mb-1">Featured Project</p>
-                <h3 className="text-2xl font-bold text-slate-light mb-4">
-                  {project.title}
-                </h3>
-                <div className="bg-navy p-6 rounded shadow-xl mb-4">
-                  <p className="text-slate">{project.description}</p>
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-2/5 w-full">
+                  <div className="overflow-hidden rounded-md aspect-video bg-slate-800">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
-                <div className={`flex flex-wrap gap-2 mb-6 ${
-                  i % 2 === 0 ? "" : "md:justify-end"
-                }`}>
-                  {project.tags.map((tag, j) => (
-                    <Badge key={j} variant="outline" className="font-mono text-xs bg-transparent">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                <div className={`flex gap-4 ${
-                  i % 2 === 0 ? "" : "md:justify-end"
-                }`}>
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-slate-light hover:text-highlight transition-colors"
-                    aria-label="GitHub Repository"
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-slate-light hover:text-highlight transition-colors"
-                    aria-label="Live Demo"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
+                <div className="md:w-3/5 w-full">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-bold text-lightest-slate">
+                      {project.title}
+                    </h3>
+                    <div className="flex space-x-3">
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lightest-slate hover:text-green transition-colors"
+                        aria-label={`GitHub repository for ${project.title}`}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          role="img"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-5 w-5"
+                        >
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lightest-slate hover:text-green transition-colors"
+                        aria-label={`Live site for ${project.title}`}
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    </div>
+                  </div>
+                  <p className="text-slate mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge
+                        key={techIndex}
+                        variant="outline"
+                        className="bg-navy-light text-green border-green text-xs"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        <h3 className="text-2xl text-slate-light text-center font-semibold mb-8">Other Noteworthy Projects</h3>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {otherProjects.map((project, i) => (
-            <Card key={i} className="bg-navy border-navy-light hover:border-highlight/50 transition-all h-full flex flex-col">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div className="text-highlight">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                  </div>
-                  <div className="flex gap-4">
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-slate hover:text-highlight transition-colors"
-                    >
-                      <Github size={18} />
-                    </a>
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-slate hover:text-highlight transition-colors"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
-                  </div>
-                </div>
-                <CardTitle className="text-slate-light">{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardFooter className="pt-2 mt-auto">
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.slice(0, 4).map((tag, j) => (
-                    <span key={j} className="text-xs font-mono text-slate">
-                      {tag}
-                    </span>
-                  ))}
-                  {project.tags.length > 4 && (
-                    <span className="text-xs font-mono text-slate">+{project.tags.length - 4}</span>
-                  )}
-                </div>
-              </CardFooter>
-            </Card>
           ))}
         </div>
       </div>
