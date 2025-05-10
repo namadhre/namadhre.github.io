@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -25,7 +24,18 @@ const Hero = () => {
             className="text-highlight border border-highlight hover:bg-highlight/10 bg-transparent"
             size="lg"
           >
-            <a href="#projects">Check out my work</a>
+            <a 
+              href="#projects" 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('projects');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Check out my work
+            </a>
           </Button>
         </div>
       </div>
