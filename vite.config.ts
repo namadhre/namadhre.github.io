@@ -30,5 +30,7 @@ export default defineConfig(({ mode }) => ({
         entryFileNames: 'assets/[name]-[hash].js',
       },
     },
+    copyPublicDir: true,
   },
+  publicDir: 'public',
 }));
