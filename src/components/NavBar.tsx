@@ -50,7 +50,16 @@ const NavBar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-highlight">SDE</Link>
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="text-2xl font-bold text-highlight"
+        >
+          SDE
+        </a>
 
         {isMobile ? (
           <>
