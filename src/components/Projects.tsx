@@ -14,7 +14,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Biasket Clone",
+    title: "Bigbasket Clone",
     description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment processing using Stripe.",
     image: "images/bb_clone.png",
     tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
